@@ -321,7 +321,6 @@ netfilter-persistent reload
 cd /usr/bin
 # menu
 wget -O menu "https://raw.githubusercontent.com/noelrubio143/aa/refs/heads/main/menu/menu.sh"
-wget -O m-vless "https://raw.githubusercontent.com/noelrubio143/aa/refs/heads/main/menu/m-vless.sh"
 wget -O running "https://raw.githubusercontent.com/noelrubio143/aa/refs/heads/main/menu/running.sh"
 wget -O clearcache "https://raw.githubusercontent.com/noelrubio143/aa/refs/heads/main/menu/clearcache.sh"
 
@@ -344,7 +343,6 @@ wget -O xp "https://raw.githubusercontent.com/noelrubio143/aa/refs/heads/main/ss
 wget -O m-dns "https://raw.githubusercontent.com/noelrubio143/aa/refs/heads/main/menu/m-dns.sh"
 
 chmod +x menu
-chmod +x m-vless
 chmod +x running
 chmod +x clearcache
 
