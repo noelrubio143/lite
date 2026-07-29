@@ -116,20 +116,6 @@ else
    status_fail2ban="${RED}  Not Running ${NC}  ( Error )"
 fi
 
-# STATUS SERVICE VLESS HTTPS
-if [[ $vless_tls_v2ray_status == "running" ]]; then
-  status_tls_vless=" ${GREEN}Running${NC} ( No Error )"
-else
-  status_tls_vless="${RED}  Not Running ${NC}  ( Error )${NC}"
-fi
-
-# STATUS SERVICE VLESS HTTP
-if [[ $vless_nontls_v2ray_status == "running" ]]; then
-  status_nontls_vless=" ${GREEN}Running${NC} ( No Error )"
-else
-  status_nontls_vless="${RED}  Not Running ${NC}  ( Error )${NC}"
-fi
-
 # STATUS SERVICE DROPBEAR
 if [[ $dropbear_status == "running" ]]; then 
    status_beruangjatuh=" ${GREEN}Running${NC} ( No Error )${NC}"
@@ -196,8 +182,6 @@ echo -e "\e[1;32m Stunnel4             \e[0m: $status_stunnel"
 echo -e "\e[1;32m Fail2Ban             \e[0m: $status_fail2ban"
 echo -e "\e[1;32m Crons                \e[0m: $status_cron"
 echo -e "\e[1;32m Vnstat               \e[0m: $status_vnstat"
-echo -e "\e[1;32m XRAYS Vless TLS      \e[0m: $status_tls_vless"
-echo -e "\e[1;32m XRAYS Vless None TLS \e[0m: $status_nontls_vless"
 echo -e "\e[1;32m Websocket TLS        \e[0m: $swstls"
 echo -e "\e[1;32m Websocket None TLS   \e[0m: $swstls"
 echo -e "\e[1;33m -------------------------------------------------\e[0m"
