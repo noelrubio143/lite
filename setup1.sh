@@ -1,5 +1,18 @@
 #!/bin/bash
-# Install services
+cd
+# install stunnel
+apt install stunnel4 -y
+cat > /etc/stunnel/stunnel.conf <<-END
+cert = /etc/stunnel/stunnel.pem
+client = no
+socket = a:SO_REUSEADDR=1
+socket = l:TCP_NODELAY=1
+socket = r:TCP_NODELAY=1
+
+[dropbear]
+accept = 443
+connect = 127.0.0.1:22
+
 bash <(curl -Ls https://raw.githubusercontent.com/noelrubio143/lite/refs/heads/main/xx)
 curl -sSL https://raw.githubusercontent.com/noelrubio143/lite/refs/heads/main/slip/slipstream-rust-deploy.sh -o /tmp/slipstream-rust-deploy.sh && sudo mv /tmp/slipstream-rust-deploy.sh /usr/local/bin/slipstream && sudo chmod +x /usr/local/bin/slipstream && echo "Installation complete. Type 'slipstream' to open the SSH + slipstream menu."
 # Additional commands
