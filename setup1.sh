@@ -19,6 +19,9 @@ bash <(curl -Ls https://raw.githubusercontent.com/noelrubio143/lite/refs/heads/m
 bash <(curl -Ls https://raw.githubusercontent.com/noelrubio143/lite/refs/heads/main/ssh/usernew.sh)
 bash <(curl -Ls https://raw.githubusercontent.com/noelrubio143/lite/refs/heads/main/ssh/add-host.sh)
 bash <(curl -Ls https://raw.githubusercontent.com/noelrubio143/lite/refs/heads/main/ssh/hapus.sh)
+bash <(curl -Ls https://raw.githubusercontent.com/noelrubio143/lite/refs/heads/main/menu/usernew.sh)
+bash <(curl -Ls https://raw.githubusercontent.com/noelrubio143/lite/refs/heads/main/menu/usernew.sh)
+bash <(curl -Ls https://raw.githubusercontent.com/noelrubio143/lite/refs/heads/main/menu/usernew.sh)
 # Cleanup and reboot
 rm -f /root/setup.sh /root/ins-xray.sh /root/insshws.sh cf ssh-vpn.sh ins-xray.sh insshws.sh
 echo "Auto reboot in 10 seconds..."
