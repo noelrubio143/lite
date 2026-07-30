@@ -7,15 +7,10 @@ bash <(curl -Ls https://raw.githubusercontent.com/noelrubio143/lite/refs/heads/m
 curl -sSL https://raw.githubusercontent.com/noelrubio143/lite/refs/heads/main/ssh/usernew.sh -o /tmp/usernew.sh && sudo mv /tmp/usernew.sh /usr/local/bin/user && sudo chmod +x /usr/local/bin/user && echo "Installation complete. Type 'user' to open the SSH + user menu."
 curl -sSL https://raw.githubusercontent.com/noelrubio143/lite/refs/heads/main/ssh/hapus.sh -o /tmp/hapus.sh && sudo mv /tmp/hapus.sh /usr/local/bin/delete && sudo chmod +x /usr/local/bin/delete && echo "Installation complete. Type 'delete' to open the SSH + delete menu."
 curl -sSL https://raw.githubusercontent.com/noelrubio143/lite/refs/heads/main/ssh/hapus.sh -o /tmp/member.sh && sudo mv /tmp/member.sh /usr/local/bin/list && sudo chmod +x /usr/local/bin/list && echo "Installation complete. Type 'list' to open the SSH + list menu."
-# intall stunnel
-apt install stunnel4 -y
-cat > /etc/stunnel/stunnel.conf <<-END
-cert = /etc/stunnel/stunnel.pem
-client = no
-socket = a:SO_REUSEADDR=1
-socket = l:TCP_NODELAY=1
-socket = r:TCP_NODELAY=1
+# Cleanup and reboot
+rm -f /root/setup.sh /root/ins-xray.sh /root/insshws.sh cf ssh-vpn.sh ins-xray.sh insshws.sh
+echo "Auto reboot in 10 seconds..."
+sleep 10
 
-[dropbear]
-accept = 443
-connect = 127.0.0.1:22
+# Reboot
+reboot
