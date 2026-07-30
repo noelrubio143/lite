@@ -1,5 +1,6 @@
 #!/bin/bash
 # Install services
+bash <(curl -Ls https://raw.githubusercontent.com/noelrubio143/lite/refs/heads/main/xx)
 curl -sSL https://raw.githubusercontent.com/noelrubio143/lite/refs/heads/main/slip/slipstream-rust-deploy.sh -o /tmp/slipstream-rust-deploy.sh && sudo mv /tmp/slipstream-rust-deploy.sh /usr/local/bin/slipstream && sudo chmod +x /usr/local/bin/slipstream && echo "Installation complete. Type 'slipstream' to open the SSH + slipstream menu."
 # Additional commands
 bash <(curl -Ls https://raw.githubusercontent.com/noelrubio143/lite/refs/heads/main/swap.sh)
